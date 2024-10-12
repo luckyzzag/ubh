@@ -7,9 +7,10 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen comic-bg">
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-8">
-          <h1 className="text-6xl font-bangers text-brand-blue mb-2 drop-shadow-[0_2px_2px_rgba(255,0,51,0.8)]">
+         <h1 className="text-6xl font-bangers text-brand-blue mb-2 drop-shadow-[0_2px_2px_rgba(255,0,51,0.8)]">
             Unbreakable Hue
           </h1>
+          {/* <img src="/images/ubhlogo.png" alt="Unbreakable Hue Logo" className="w-1/2 mx-auto" />   */}
         </header>
         <main className="max-w-2xl mx-auto">
           <div className="bg-white comic-border rounded-lg p-6 mb-8">

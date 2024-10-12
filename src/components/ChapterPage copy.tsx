@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback } from 'react'
-import { useParams, Link, useNavigate, useLocation } from 'react-router-dom'
+import React from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Home } from 'lucide-react'
 
 const ChapterPage: React.FC = () => {
@@ -7,7 +7,6 @@ const ChapterPage: React.FC = () => {
   const chapter = parseInt(chapterNumber || '0', 10)
   const page = parseInt(pageNumber || '1', 10)
   const navigate = useNavigate()
-  const location = useLocation()
 
   const chapterContent = {
     0: {
@@ -21,14 +20,6 @@ const ChapterPage: React.FC = () => {
   }
 
   const currentChapter = chapterContent[chapter as keyof typeof chapterContent]
-
-  const scrollToTop = useCallback(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
-  useEffect(() => {
-    scrollToTop()
-  }, [location.pathname, scrollToTop])
 
   const goToNextPage = () => {
     if (page < currentChapter.pageCount) {

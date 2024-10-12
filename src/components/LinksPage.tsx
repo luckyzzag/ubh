@@ -13,7 +13,7 @@ const LinksPage: React.FC = () => {
           <ul className="space-y-4">
             <li>
               <Link 
-                to="/chapter/0" 
+                to="/" 
                 className="flex items-center p-3 bg-brand-red text-white font-bangers text-xl rounded hover:bg-brand-blue transition duration-300"
               >
                 <Book className="mr-2" />
